@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "myproje"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+
+# Authors should be specified as an array of strings
+authors = ["Teklemariam Mossie <teklemariammossie1@gmail.com>"]
+
+[tool.poetry.dependencies]
+requests = ">=2.32.3,<3.0.0"
+django = ">=5.1.4,<6.0.0"
+djangorestframework = ">=3.15.2,<4.0.0"
+python = ">=3.10"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
