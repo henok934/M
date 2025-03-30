@@ -4,13 +4,10 @@ __pycache__/
 *.pyo
 *.pyd
 myenv/
-db.sqlite3
 *.log
 
 # Django
 *.pot
 *.pyc
-*.sqlite3
 media/
-staticfiles/
 
