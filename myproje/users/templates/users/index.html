@@ -132,7 +132,7 @@
                                                  </br></br></br> </br></br></br>
                                                  </br> </br></br>
 
-<form action="http://127.0.0.1:8000/book/" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 20px auto 0; padding: 0; background-color: purple; height: auto; width: 100%; max-width: 1400px; padding: 20px;">
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 20px auto 0; padding: 0; background-color: purple; height: auto; width: 100%; max-width: 1400px; padding: 20px;">
     {% csrf_token %}
     <div class="search_item" style="margin: 0;">
         <label for="depcity" style="color: blue; font-weight: bold; display: block; margin-left: 5px;"><b>From</b></label>
@@ -228,7 +228,7 @@
                                          </br></br></br>
                                                   </br></br></br>
 						  </br></br></br></br></br>
-<form action="http://127.0.0.1:8000/book/" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 20px auto 0; padding: 0; background-color: cyan; height: auto; width: 100%; max-width: 1400px; padding: 20px;">
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 20px auto 0; padding: 0; background-color: cyan; height: auto; width: 100%; max-width: 1400px; padding: 20px;">
     {% csrf_token %}
     <div class="search_item" style="margin: 0;">
         <label for="depcity" style="color: blue; font-weight: bold; display: block; margin-left: 5px;"><b>From</b></label>
@@ -315,7 +315,7 @@ button {
                                                 </br></br></br>
                                                  </br></br></br></br></br></br></br></br>
                                                  </br></br></br>
-<form action="http://127.0.0.1:8000/book/" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 20px auto 0; padding: 0; background-color: pink; height: auto; width: 100%; max-width: 1400px; padding: 20px;">
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 20px auto 0; padding: 0; background-color: pink; height: auto; width: 100%; max-width: 1400px; padding: 20px;">
     {% csrf_token %}
     <div class="search_item" style="margin: 0;">
         <label for="depcity" style="color: blue; font-weight: bold; display: block; margin-left: 5px;"><b>From</b></label>
