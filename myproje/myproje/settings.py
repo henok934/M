@@ -71,18 +71,19 @@ DATABASES = {
 }
 """
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'my_db',
         'USER': 'data',  # Your PostgreSQL username
         'PASSWORD': 'Henok@934',  # Your PostgreSQL password
+        #'HOST': 'my_db.oregon.render.com',
+        #'HOST': 'data.oregon.render.com',  # Replace with the actual host
         'HOST': 'localhost',  # Set to empty string for default
-        'PORT': '',  # Set to empty string for default
+        'PORT': '5432',  # Set to empty string for default
     }
 }
+
 
 
 AUTH_USER_MODEL = 'users.CustomUser'  # Replace with your app name
