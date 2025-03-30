@@ -15,6 +15,12 @@ ALLOWED_HOSTS = ['*']  # Use with caution in production
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # Installed applications
+
+CSRF_FAILURE_VIEW = 'users.views.custom_csrf_failure_view'
+CSRF_TRUSTED_ORIGINS = [
+    'https://m-k4xk.onrender.com',
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -27,6 +33,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

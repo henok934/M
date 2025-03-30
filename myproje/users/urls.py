@@ -10,6 +10,9 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('registor/', views.registor, name='registor'),
     path('profile/', views.profile, name='profile'),
+    path('custom_csrf_failure_view/', views.custom_csrf_failure_view, name='custom_csrf_failure_view'),
+    #custom_csrf_failure_view
+
     path('buses/', views.buses, name='buses'),
     path('login/', views.login, name='login'),
     path('logout/', views.logout, name='logout'),

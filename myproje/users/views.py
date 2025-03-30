@@ -15,6 +15,10 @@ from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render
 from .models import Buschange, City  # Ensure you import your models
 
+def custom_csrf_failure_view(request, reason=""):
+    return render(request, 'users/csrf_failure.html', {'reason': reason})
+
+
 def home(request):
     buschanges = Buschange.objects.all()
     buschanges_count = buschanges.count()
