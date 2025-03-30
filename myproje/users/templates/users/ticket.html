@@ -34,7 +34,7 @@
 						</div>
 						<div class="user_box ml-auto">
 							<div class="user_box_login user_box_link"><a href="{% url 'login' %}">login</a></div>
-							<div class="user_box_register user_box_link"><a href="{% url 'registor' %}">register</a></div>			
+							<div class="user_box_register user_box_link"><a href="{% url 'registor' %}"></a></div>			
 						</div>
 					</div>
 				</div>
@@ -141,6 +141,33 @@
     </div>
 {% endif %}
         <img src="{{ qr_code }}" alt="QR Code">
+
+<style>
+    .qr-code {
+        width: 100px;  /* Set the desired width */
+        height: 100px; /* Set the desired height to minimize vertically */
+        object-fit: contain; /* Ensure the aspect ratio is maintained */
+        max-width: 100%; /* Ensure it doesn’t overflow its container */
+        max-height: 100%; /* Ensure it doesn’t overflow its container */
+        display: block; /* Center if needed */
+        margin: 0 auto; /* Center the image */
+    }
+</style>
+
+<!--
+<style>
+    .qr-code {
+        width: 100px;  /* Set the desired width */
+        height: auto;  /* Maintain aspect ratio */
+        max-width: 50%; /* Ensure it doesn’t overflow its container */
+        max-height: 50%; /* Ensure it doesn’t overflow its container */
+        display: block; /* Center if needed */
+        margin: 0 auto; /* Center the image */
+    }
+</style>
+-->
+
+
 
 {% if error %}
     <div class="success">
