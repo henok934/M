@@ -169,7 +169,7 @@
 </style>
 
  	    <div class="search_panel active" style="background-color: #E0F7FA;">
-	    <form action="http://127.0.0.1:8000/book/" method="post" id="search_form_1" class="search_panel_content d-flex flex-wrap align-items-center justify-content-start" style="margin: 20px auto; padding: 10px; width: 100%; max-width: 400px; background-color: #FFFFFF; auto;">
+	    <form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-wrap align-items-center justify-content-start" style="margin: 20px auto; padding: 10px; width: 100%; max-width: 400px; background-color: #FFFFFF; auto;">
         {% csrf_token %}
 <div style="display: flex; align-items: center; margin: 5px 0; margin-top:30px;">
     <label for="depcity" style="color: #003366; font-weight: bold; margin-right: 10px; margin-left: 50px;"><b>From:</b></label>

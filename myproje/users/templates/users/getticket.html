@@ -126,7 +126,7 @@
         <div class="col">
             <div class="search_panel active">
                 <div class="container mt-4">
-			<form action="http://127.0.0.1:8000/get_ticket/" method="post" id="search_form_1" class="form-container" style="width: 350px; margin: 0 auto;">
+		<form action="{% url 'get_ticket' %}" method="post" id="search_form_1" class="form-container" style="width: 350px; margin: 0 auto;">
                         {% csrf_token %}
                               {% if error %}
 <div class="error">
