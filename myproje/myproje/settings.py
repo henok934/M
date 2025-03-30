@@ -79,7 +79,7 @@ DATABASES = {
         'PASSWORD': 'Henok@934',  # Your PostgreSQL password
         #'HOST': 'my_db.oregon.render.com',
         #'HOST': 'data.oregon.render.com',  # Replace with the actual host
-        'HOST': 'localhost',  # Set to empty string for default
+        'HOST': '127.0.0.1',  # Set to empty string for default
         'PORT': '5432',  # Set to empty string for default
     }
 }
