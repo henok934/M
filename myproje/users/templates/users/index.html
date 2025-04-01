@@ -144,6 +144,245 @@
                                                  </br></br>
 
 
+
+
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-column" style="margin: 10px 0; padding: 20px; background-color: cyan; width: 95%; max-width: 600px; margin-left: 0px;">
+    {% csrf_token %}
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="depcity" style="color: blue; font-weight: bold; display: block;"><b>From</b></label>
+        <select name="depcity" id="depcity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="descity" style="color: blue; font-weight: bold; display: block;"><b>To</b></label>
+        <select name="descity" id="descity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="date" style="color: blue; font-weight: bold; display: block;"><b>Date</b></label>
+        <input type="date" name="date" id="date" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+    </div>
+    <div style="margin: 10px 0; text-align: left;">
+        <button type="submit" style="background-color: yellow; color: black; width: 130px; height: 45px; border: none; text-align: center;">
+            Search
+        </button>
+    </div>
+</form>
+
+
+<!--
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-column" style="margin: 10px 0; padding: 20px; background-color: cyan; width: 95%; max-width: 600px; align-items: flex-start;">
+    {% csrf_token %}
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="depcity" style="color: blue; font-weight: bold; display: block;"><b>From</b></label>
+        <select name="depcity" id="depcity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="descity" style="color: blue; font-weight: bold; display: block;"><b>To</b></label>
+        <select name="descity" id="descity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="date" style="color: blue; font-weight: bold; display: block;"><b>Date</b></label>
+        <input type="date" name="date" id="date" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+    </div>
+    <div style="margin: 10px 0; text-align: left;">
+        <button type="submit" style="background-color: yellow; color: black; width: 130px; height: 45px; border: none; text-align: center;">
+            Search
+        </button>
+    </div>
+</form>
+-->
+
+<!--
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-column align-items-start" style="margin: 10px auto; padding: 20px; background-color: cyan; width: 100%; max-width: 600px; padding-left: 0;">
+    {% csrf_token %}
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="depcity" style="color: blue; font-weight: bold; display: block;"><b>From</b></label>
+        <select name="depcity" id="depcity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="descity" style="color: blue; font-weight: bold; display: block;"><b>To</b></label>
+        <select name="descity" id="descity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="date" style="color: blue; font-weight: bold; display: block;"><b>Date</b></label>
+        <input type="date" name="date" id="date" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+    </div>
+    <div style="margin: 10px 0; text-align: center;">
+        <button type="submit" style="background-color: yellow; color: black; width: 130px; height: 45px; border: none; text-align: center;">
+            Search
+        </button>
+    </div>
+</form>
+-->
+<!--
+<div style="margin-left: 0; padding-left: 0;">
+    <form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-column align-items-start" style="margin: 10px auto; padding: 20px; background-color: cyan; width: 95%; max-width: 600px;">
+        {% csrf_token %}
+        <div class="search_item" style="margin: 5px 0; width: 100%;">
+            <label for="depcity" style="color: blue; font-weight: bold; display: block;"><b>From</b></label>
+            <select name="depcity" id="depcity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+                <option value="" style="color: green; font-weight: bold;">Select</option>
+                {% if des %}
+                    {% for depcity in des %}
+                        <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+        </div>
+        <div class="search_item" style="margin: 5px 0; width: 100%;">
+            <label for="descity" style="color: blue; font-weight: bold; display: block;"><b>To</b></label>
+            <select name="descity" id="descity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+                <option value="" style="color: green; font-weight: bold;">Select</option>
+                {% if des %}
+                    {% for depcity in des %}
+                        <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                    {% endfor %}
+                {% endif %}
+            </select>
+        </div>
+        <div class="search_item" style="margin: 5px 0; width: 100%;">
+            <label for="date" style="color: blue; font-weight: bold; display: block;"><b>Date</b></label>
+            <input type="date" name="date" id="date" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+        </div>
+        <div style="margin: 10px 0; text-align: center;">
+            <button type="submit" style="background-color: yellow; color: black; width: 130px; height: 45px; border: none; text-align: center;">
+                Search
+            </button>
+        </div>
+    </form>
+</div>
+-->
+
+
+<!--
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-column align-items-center" style="margin: 10px auto; padding: 20px; background-color: cyan; width: 95%; max-width: 600px; margin-left: -200px;">
+    {% csrf_token %}
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="depcity" style="color: blue; font-weight: bold; display: block;"><b>From</b></label>
+        <select name="depcity" id="depcity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="descity" style="color: blue; font-weight: bold; display: block;"><b>To</b></label>
+        <select name="descity" id="descity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 5px 0; width: 100%;">
+        <label for="date" style="color: blue; font-weight: bold; display: block;"><b>Date</b></label>
+        <input type="date" name="date" id="date" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+    </div>
+    <div style="margin: 10px 0; text-align: center;">
+        <button type="submit" style="background-color: yellow; color: black; width: 130px; height: 45px; border: none; text-align: center;">
+            Search
+        </button>
+    </div>
+</form>
+-->
+
+
+
+<!--
+<form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-column align-items-center" style="margin: 10px auto; padding: 20px; background-color: cyan; width: 95%; max-width: 600px;">
+    {% csrf_token %}
+    <div class="search_item" style="margin: 10px 0;">
+        <label for="depcity" style="color: blue; font-weight: bold; display: block;"><b>From</b></label>
+        <select name="depcity" id="depcity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 10px 0;">
+        <label for="descity" style="color: blue; font-weight: bold; display: block;"><b>To</b></label>
+        <select name="descity" id="descity" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+            <option value="" style="color: green; font-weight: bold;">Select</option>
+            {% if des %}
+                {% for depcity in des %}
+                    <option value="{{ depcity.depcity }}" style="color: blue; font-weight: bold;">{{ depcity.depcity }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+    </div>
+    <div class="search_item" style="margin: 10px 0;">
+        <label for="date" style="color: blue; font-weight: bold; display: block;"><b>Date</b></label>
+        <input type="date" name="date" id="date" class="form-control" style="width: 100%; max-width: 160px; height: 45px; color: brown;" required>
+    </div>
+    <div style="margin: 10px 0; text-align: center;">
+        <button type="submit" style="background-color: yellow; color: black; width: 130px; height: 45px; border: none; text-align: center;">
+            Search
+        </button>
+    </div>
+</form>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <form action="{% url 'book' %}" method="post" id="search_form_1" class="search_panel_content d-flex flex-row align-items-center justify-content-start" style="margin: 10px auto 0; padding: 0; background-color: cyan; height: auto; width: 95%; max-width: 1200px; padding: 20px;">
     {% csrf_token %}
     <div class="search_item" style="margin: 0;">
@@ -178,6 +417,32 @@
         </button>
     </div>
 </form>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <style>
