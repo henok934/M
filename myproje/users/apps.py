@@ -17,7 +17,7 @@ def create_default_user(sender, **kwargs):
             CustomUser.objects.create_user(
                 username='henok',
                 email='defaultuser@example.com',
-                password='12345678',
+                password='12341234',
                 phone='0934567890',
                 fname='Default',
                 lname='User',
