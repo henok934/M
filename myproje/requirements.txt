@@ -4,7 +4,7 @@ ConfigParser==7.2.0
 gunicorn==23.0.0
 coverage==7.7.1
 whitenoise>=6.0
-#psycopg2-binary>=2.9.0
+psycopg2-binary>=2.9.0
 #cryptography==3.4.8
 cryptography>=41.0.5,<45
 Django==5.1.6  # or Django==3.2.12 if needed
