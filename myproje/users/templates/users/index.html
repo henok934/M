@@ -505,10 +505,8 @@ button {
                         </div>
                 </div>
         </div>
-        </br>
-        </br>
-        </br>
-        </br>
+
+
 <div class="contact">
                 <div class="contact_background" style="margin-buttom:50px;background-image:url(../static/images/contact.png)"></div>
                 </br></br></br> </br></br></br>
@@ -518,14 +516,11 @@ button {
                                         <div class="contact_image">
 
                                         </div>
-                                </div></br></br>
-                                </br>
-                                </br>
-                                </br>
+                                </div></br>
                                 <div class="col-lg-7">
                                         <div class="contact_form_container">
                                                 <div class="contact_title">get in touch</div>
-                                                <form action="http://127.0.0.1:8000/comment/" method = "post" id="contact_form" class="contact_form">
+                                                <form action="{% url 'comment' %}" method = "post" id="contact_form" class="contact_form">
                                                          {% csrf_token %}
                                                         <input type="text" name = "name" id="contact_form_name" class="contact_form_name input_field" placeholder="Name" required="required" data-error="Name is required.">
                                                         <input type="email" name = "email" id="contact_form_email" class="contact_form_email input_field" placeholder="E-mail" required="required" data-error="Email is required.">
